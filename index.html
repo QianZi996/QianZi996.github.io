@@ -172,7 +172,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>--查看已知定时任务调用存储过程的运行状态
+        <pre><code>
+--查看已知定时任务调用存储过程的运行状态
     SELECT t.* FROM dba_jobs t where upper(what) like 
     &#39;%PRC_VW_AUTO_DEDUCT01%&#39;
 
@@ -189,7 +190,9 @@
     BEGIN
         DBMS_JOB.SUBMIT( 
             JOB =&gt; job, /*自动生成JOB_ID*/ 
-            WHAT =&gt; &#39;GET_WARNING_INFO(2, 202, &#39;&#39;2,44,11&#39;&#39;);&#39;, /*需要执行的存储过程名称或SQL语句*/ 
+			
+			/*需要执行的存储过程名称或SQL语句*/ 
+            WHAT =&gt; &#39;GET_WARNING_INFO(2, 202, &#39;&#39;2,44,11&#39;&#39;);&#39;, 
             NEXT_DATE =&gt; sysdate, /*初次执行时间-立即执行*/ 
             INTERVAL =&gt; &#39;trunc(sysdate,&#39;&#39;mi&#39;&#39;)+1/(24*60)&#39; /*每隔1分钟执行一次*/
         ); 
@@ -213,7 +216,7 @@
 
     begin 
         dbms_job.broken(jobId,true,next_date); 
-        /*停止一个job,jobId, job的ID,里面参数true也可是false，next_date（某一时刻停止）也可是sysdate（立刻停止）。 */
+        /*停止一个job,jobId, job的ID,里面参数true也可是false，next_date（某一时刻停止）也可是sysdate（立刻停止）*/
         commit;
     end;
     
