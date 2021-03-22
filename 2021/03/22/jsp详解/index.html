@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021 | qianzi的个人主页</title>
+  <title>“jsp详解” | qianzi的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="qianzi的个人主页">
-<meta property="og:url" content="http://example.com/archives/2021/index.html">
+  <meta name="description" content="一、什么是Jspjsp是一种基于文本的程序，全名java server page,其特点是html和java程序共存。执行时jsp会被运行容器编译，编译后的jsp跟servlet一样，因此jsp是另一种形式的servlet。 二、jsp页面组成jsp 页面包括以下内容：    静态内容    指令    表达式    小脚本    声明    注释1.指令：    page指令：  通常位于jsp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="“jsp详解”">
+<meta property="og:url" content="http://example.com/2021/03/22/jsp%E8%AF%A6%E8%A7%A3/index.html">
 <meta property="og:site_name" content="qianzi的个人主页">
+<meta property="og:description" content="一、什么是Jspjsp是一种基于文本的程序，全名java server page,其特点是html和java程序共存。执行时jsp会被运行容器编译，编译后的jsp跟servlet一样，因此jsp是另一种形式的servlet。 二、jsp页面组成jsp 页面包括以下内容：    静态内容    指令    表达式    小脚本    声明    注释1.指令：    page指令：  通常位于jsp">
 <meta property="og:locale">
+<meta property="article:published_time" content="2021-03-22T08:20:03.000Z">
+<meta property="article:modified_time" content="2021-03-22T08:20:46.436Z">
 <meta property="article:author" content="吴正乾">
 <meta name="twitter:card" content="summary">
   
@@ -150,130 +154,300 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-jsp详解" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/22/jsp%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
-  	<time datetime="2021-03-22T08:21:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/22/jsp%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">jsp九大内置对象</a>
+    <h1 class="article-title" itemprop="name">
+      “jsp详解”
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/22/jsp%E8%AF%A6%E8%A7%A3/" class="archive-article-date">
+        
+        <a href="/2021/03/22/jsp%E8%AF%A6%E8%A7%A3/" class="archive-article-date">
   	<time datetime="2021-03-22T08:20:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/22/jsp%E8%AF%A6%E8%A7%A3/">“jsp详解”</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、什么是Jsp<br>jsp是一种基于文本的程序，全名java server page,其特点是html和java程序共存。执行时jsp会被运行容器编译，编译后的jsp跟servlet一样，因此jsp是另一种形式的servlet。</p>
+<p>二、jsp页面组成<br>jsp 页面包括以下内容：<br>    静态内容<br>    指令<br>    表达式<br>    小脚本<br>    声明<br>    注释<br>1.指令：<br>    page指令：  通常位于jsp页面的顶端，同一个页面可以有多个page指令。<br>    include指令：将一个外部文件嵌入到jsp文件中。<br>    taglib指令 ：使用标签定义新的自定义标签。<br>1.1其中page指令语法：<br>&lt;%@ page 属性=“属性值”&gt;<br>属性 | 默认值<br>——— | ——— language | java import | “”<br>1.2 include 指令<br>  &lt;%@ include file=”url” %&gt;</p>
+<p>1.3 动作<br>    • include动作<br>  &lt;jsp:include page=”url” flush=”true”/&gt;<br>include 动作和include指令区别<br>描述      include指令       include 动作<br>语法    &lt; % @includefile=””/&gt;    &lt; jsp:include page=”url” flush=”true”/&gt;<br>发生时间      页面转换期间       请求期间<br>包含内容      文件实际内容       页面的输出<br>转化servlet      一个servlet       2个servlet<br>编译时间      较慢       较快<br>执行时间      稍快       较慢–每次资源必须被编译</p>
+<p>forward动作<br>  &lt;jsp:forward page=”url”/&gt;<br>  ==<br>  request.getRequestDispatcher(“/url”).forward(res,resp);</p>
+<p>param动作<br>   &lt;jsp:param name=”参数名” value=”参数值”/&gt;<br>   常常与<a href="jsp:forward">jsp:forward</a>一起使用</p>
+<p>例子：<br>   &lt;jsp:forward page=”user.jsp”&gt;</p>
+<pre><code>  &lt;jsp:param name=&quot;email&quot;  value=&quot;1233@154.com&quot;/&gt;
+</code></pre>
+<p>   </jsp:forward></p>
+<p>2.jsp注释<br>    html注释<br>  <!-- html注释 -->//客户端可见<br>    jsp 注释<br>  &lt;%– jsp注释 –%&gt;//客户端不可见<br>    jsp 脚本注释 //客户端不可见<br>  //单行注释<br>  ／** 多行注释*／</p>
+<p>3.jsp脚本<br>在jsp页面中执行的java代码，语法：<br>&lt;%   java 代码 %&gt;</p>
+<p>4.jsp声明 在jsp页面定义变量或者方法，语法<br>&lt;%! java 代码  %&gt;<br>举例：<br>&lt;%!<br> String s=”adele”;<br> int add(int x,int y){<br>    return x+y;<br> }<br>%&gt;</p>
+<p>5.jsp表达式 在jsp页面执行的表达式，语法：<br>&lt;% =表达式 %&gt;// 表达式不以分号结尾<br>举例：<br>&lt;%!<br> String s=”adele”;<br>%&gt;</p>
+<h2>  hello,<%=s %> </h2>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>三、jsp生命周期</p>
+<p>jspService()是用来处理客户端请求的，对于每一个请求，服务器会创建一个新的线程来处理该请求。以多线程方式执行大大降低对系统的资源需求，提高系统的并发量和缩短了响应时间，servlet是常驻在服务器内存中。<br>它同servlet 一样，jsp 实例初始化和销毁也会调用sevlet的init() 和destroy(); 另外jsp还有自己的初始化方法_jspInit();_jspDestroy();<br>&lt;%@ page language=”java” contentType=”text/html”;charset=”utf-8”&gt;<br>&lt;%!<br>public void _jspInit(){<br>}<br>public void _jspDestroy(){<br>}<br>%&gt;</p>
+<p>四、javaben的使用<br>动作元素： 动作元素为请求处理阶段提供信息。</p>
+<p>在jsp页面使用javaben<br>    像普通的java类一样，创建javabean;<br>    在jsp使用动作标签来使用 javaben<br>相关标签如下：<br>&lt;jsp:useBean id=”” class=”” scope=”” /&gt;<br>&lt;jsp:setProperty name=”javabean 是例”  property=”*”/&gt;(跟表单关联)<br>&lt;jsp:setProperty name=”javabean 是例”  property=”javaben 属性名”/&gt;(跟表单关联)<br>&lt;jsp:setProperty name=”javabean 是例”  property=”javaben 属性名”  value=””/&gt;(手动设置)<br>&lt;jsp:setProperty name=”javabean 是例”  property=”javaben 属性名”  param=”request对象参数”/&gt;(跟request参数关联)<br>&lt;jsp:getProperty name=”” property=””/&gt;<br>举个例子： 首先用户 在login.jsp提交表单，然后用户在dologin.jsp 根据动作标签获取参数。<br>login.jsp<br> <form name="loginForm" action="dologin.jsp?mypass=999999" method="post"><br>      <table><br>        <tr><br>          <td>用户名：</td><br>          <td><input type="text" name="username" value=""/></td><br>        </tr><br>        <tr><br>          <td>密码：</td><br>          <td><input type="password" name="password" value=""/></td><br>        </tr><br>        <tr><br>          <td colspan="2" align="center"><input type="submit" value="登录"/></td></p>
+<pre><code>    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/form&gt;
+</code></pre>
+<p>dologin.jsp</p>
+<body>
+    <jsp:useBean id="myUsers" class="com.po.Users" scope="page"/>
+    <h1>setProperty动作元素</h1>
+    <hr>
+   <!--根据表单自动匹配所有的属性 -->
+   <%--<jsp:setProperty name="myUsers" property="*"/>--%>
 
+   <!--根据表单匹配所有部分的属性 -->
+<p>   &lt;%–&lt;jsp:setProperty name=”myUsers” property=”username”/&gt;–%&gt;</p>
+   <!--根表单无关，通过手工赋值给属性 -->
+<p>   &lt;%–&lt;jsp:setProperty name=”myUsers” property=”username” value=”lisi”/&gt;<br>       &lt;jsp:setProperty name=”myUsers” property=”password” value=”888888”/&gt;–%&gt;</p>
+   <!--通过URL传参数给属性赋值 -->
+<p>   &lt;jsp:setProperty name=”myUsers” property=”username”/&gt;<br>   &lt;jsp:setProperty name=”myUsers” property=”password” param=”mypass”/&gt;</p>
+   <!-- 使用传统的表达式方式来获取用户名和密码 -->
+<p>   &lt;%–<br>       用户名：&lt;%=myUsers.getUsername() %&gt;<br><br>       密码：&lt;%=myUsers.getPassword() %&gt;<br><br>   –%&gt;</p>
+   <!-- 使用getProperty方式来获取用户名和密码 -->
+<pre><code>  用户名：&lt;jsp:getProperty name=&quot;myUsers&quot; property=&quot;username&quot;/&gt; &lt;br&gt;
+  密码：&lt;jsp:getProperty name=&quot;myUsers&quot; property=&quot;password&quot;/&gt;&lt;br&gt;
+</code></pre>
+   <br>
+   <br>
+      <a href="testScope.jsp">测试javabean的四个作用域范围</a>
+      <% request.getRequestDispatcher("testScope.jsp").forward(request,
+      response);%>
+  </body>
+
+<p>javaben 四大作用域<br>    • page ，仅当前页面有效<br>    • request ,通过httpRequest.getAttribute()获取javabean对象<br>    • session ,通过httpSession.getAttribute() 获取javabean对象<br>    • application，通过application.getAttribute方法获取javabean 对象。</p>
+<p>五、cookie<br>1.概述：<br>由于http协议的无状态，无法保存用户的状态，所以需要用session和cookie.<br>cookie 是web服务器保存在客户端的一系列文本信息。它的作用是记录一些用户的行为，简化登陆，但是容易泄露用户信息。</p>
+<p>2.jsp创建和使用cookie<br>    • 创建cookie<br>    Cookie cookie=new Cookie(String ,Object);<br>    • 写入cookie<br>    response.addCookie(cookie);<br>    • 读取 cookie<br>    Cookie[] cookies=request.getCookies();</p>
+<p>3.cookie的常用方法<br>    • setMaxAge();<br>    • setValue();<br>    • getName();<br>    • getValue();<br>    • getMaxAge();<br>举个列子： 使用cookie记住用户登陆的账号密码；<br>登陆界面：</p>
+<body>
+    <h1>用户登录</h1>
+    <hr>
+    <% 
+      request.setCharacterEncoding("utf-8");
+      String username="";
+      String password = "";
+      Cookie[] cookies = request.getCookies();
+      if(cookies!=null&&cookies.length>0)
+      {
+           for(Cookie c:cookies)
+           {
+              if(c.getName().equals("username"))
+              {
+                   username =  URLDecoder.decode(c.getValue(),"utf-8");
+              }
+              if(c.getName().equals("password"))
+              {
+                   password =  URLDecoder.decode(c.getValue(),"utf-8");
+              }
+           }
+      }
+    %>
+
+<pre><code>&lt;form name=&quot;loginForm&quot; action=&quot;dologin.jsp&quot; method=&quot;post&quot;&gt;
+   &lt;table&gt;
+
+     &lt;tr&gt;
+       &lt;td&gt;用户名：&lt;/td&gt;
+       &lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;username&quot; value=&quot;&lt;%=username %&gt;&quot;/&gt;&lt;/td&gt;
+     &lt;/tr&gt;
+
+     &lt;tr&gt;
+       &lt;td&gt;密码：&lt;/td&gt;
+       &lt;td&gt;&lt;input type=&quot;password&quot; name=&quot;password&quot; value=&quot;&lt;%=password %&gt;&quot; /&gt;
+       &lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+       &lt;td colspan=&quot;2&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;isUseCookie&quot;     
+        checked=&quot;checked&quot;/&gt;十天内记住我的登录状态&lt;/td&gt;
+     &lt;/tr&gt;
+
+     &lt;tr&gt;
+       &lt;td colspan=&quot;2&quot; align=&quot;center&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;登录&quot;/&gt;  
+       &lt;input type=&quot;reset&quot; value=&quot;取消&quot;/&gt;&lt;/td&gt;
+     &lt;/tr&gt;
+   &lt;/table&gt;
+&lt;/form&gt;
+</code></pre>
+  </body>
+
+<p>处理登陆逻辑的jsp<br> <body><br>    <h1>登录成功</h1><br>    <hr><br>    <br><br>    <br><br>    <br><br>    &lt;%<br>       request.setCharacterEncoding(“utf-8”);<br>       //首先判断用户是否选择了记住登录状态<br>       String[] isUseCookies = request.getParameterValues(“isUseCookie”);<br>       if(isUseCookies!=null&amp;&amp;isUseCookies.length&gt;0)<br>       {<br>   //把用户名和密码保存在Cookie对象里面<br>   String username = URLEncoder.encode(request.getParameter(“username”),”utf-8”);</p>
+<p>   //使用URLEncoder解决无法在Cookie当中保存中文字符串问题<br>   String password = URLEncoder.encode(request.getParameter(“password”),”utf-8”);</p>
+<pre><code>      Cookie usernameCookie = new Cookie(&quot;username&quot;,username);
+      Cookie passwordCookie = new Cookie(&quot;password&quot;,password);
+      usernameCookie.setMaxAge(864000);
+      passwordCookie.setMaxAge(864000);//设置最大生存期限为10天
+      response.addCookie(usernameCookie);
+      response.addCookie(passwordCookie);
+   &#125;
+   else
+   &#123;
+      Cookie[] cookies = request.getCookies();
+      if(cookies!=null&amp;&amp;cookies.length&gt;0)
+      &#123;
+         for(Cookie c:cookies)
+         &#123;
+            if(c.getName().equals(&quot;username&quot;)||c.getName().equals(&quot;password&quot;))
+            &#123;
+                c.setMaxAge(0); //设置Cookie失效
+                response.addCookie(c); //重新保存。
+            &#125;
+         &#125;
+      &#125;
+   &#125;
+%&gt;
+&lt;a href=&quot;users.jsp&quot; target=&quot;_blank&quot;&gt;查看用户信息&lt;/a&gt;
+</code></pre>
+  </body>
+
+<p>使用cookie获取用户信息：<br> <body><br>    <h1>用户信息</h1><br>    <hr><br>    &lt;%<br>      request.setCharacterEncoding(“utf-8”);<br>      String username=””;<br>      String password = “”;<br>      Cookie[] cookies = request.getCookies();<br>      if(cookies!=null&amp;&amp;cookies.length&gt;0)<br>      {<br>           for(Cookie c:cookies)<br>           {<br>              if(c.getName().equals(“username”))<br>              {<br>                   username = URLDecoder.decode(c.getValue(),”utf-8”);<br>              }<br>              if(c.getName().equals(“password”))<br>              {<br>                   password = URLDecoder.decode(c.getValue(),”utf-8”);<br>              }<br>           }<br>      }<br>    %&gt;<br>    <BR><br>    <BR><br>    <BR><br>         用户名：&lt;%=username %&gt;<br><br>         密码：&lt;%=password %&gt;<br><br>  </body></p>
+<p>3.cookie和 session的区别<br>session    cookie<br>在服务端保存信息    在客户端保存信息<br>保存的 object类型    保存的是 string 类型<br>随会话结束，销毁数据    可以长期保存在客户端中<br>重要信息    不重要信息</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/22/jsp%E8%AF%A6%E8%A7%A3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-“创建、暂停、更改、删除">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/22/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1job/" class="archive-article-date">
-  	<time datetime="2021-03-22T07:20:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2021/03/22/jsp%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          jsp九大内置对象
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/03/22/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1job/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">定时任务job”</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/22/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1job/">定时任务job”</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/22/hello-world/" class="archive-article-date">
-  	<time datetime="2021-03-22T04:29:21.203Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/22/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -296,8 +470,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
