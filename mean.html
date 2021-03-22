@@ -15,15 +15,25 @@
 <meta property="og:locale">
 <meta property="article:author" content="吴正乾">
 <meta name="twitter:card" content="summary">
+  
     <link rel="alternative" href="/atom.xml" title="qianzi的个人主页" type="application/atom+xml">
+  
+  
     <link rel="icon" href="/favicon.png">
+  
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
+  
     #container.show {
       background: linear-gradient(200deg,#a0cfe4,#e8c37e);
     }
   </style>
+  
+
+  
+
 <meta name="generator" content="Hexo 5.4.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -38,33 +48,756 @@
 		<hgroup>
 		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
+		
+
 		<nav class="header-menu">
 			<ul>
-				<li><a href="/mean.html">主页</a></li>
+			
+				<li><a href="/">主页</a></li>
+	        
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
+    		
+    			
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
+    			
     			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+            
+    			
     			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+            
 		</nav>
 		<nav class="header-nav">
 			<div class="social">
+				
 					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+		        
 					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
 			</div>
 		</nav>
 	</header>		
 </div>
-</div>
 
-<div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
-	<img src="/img/微信图片_20200901234000.png">
-</div>
-<footer id="footer">
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      
+<nav id="mobile-nav">
+  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+	<div class="btnctn js-mobile-btnctn">
+  		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
+	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author js-header-author"></h1>
+			</hgroup>
+			
+			
+			
+				
+			
+				
+			
+			
+			
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+				</div>
+			</nav>
+
+			<nav class="header-menu js-header-menu">
+				<ul style="width: 50%">
+				
+				
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+		        
+				</ul>
+			</nav>
+		</header>				
+	</div>
+	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            
+  
+    <article id="post-jsp九大内置对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/22/jsp%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">jsp九大内置对象</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/22/jsp%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
+  	<time datetime="2021-03-22T08:21:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>jsp内置对象是web容器创建的一组对象，不使用new关键词就可以使用的内置对象。 </p>
+<p>九大内置对象包括以下：<br>    out –JspWriter<br>    request –ServletRequest<br>    reponse –ServletResponse<br>    config –ServletConfig<br>    session –HttpSession<br>    application –ServletContext<br>    page –HttpJspPage<br>    pageContext –PageContext<br>    exception –Exception</p>
+<p>1、out对象<br>JspWriter类实例，是向客户端负责输出内容的。 常用方法如下：<br>    println();<br>    clear (),如果在flush()之后调用会抛出异常。<br>    clearBuffer();<br>    flush();<br>    isAutoFlush();<br>举例子：<br> <body><br>    <h1>out内置对象</h1><br>    &lt;%<br>       out.println(“<h2>静夜思</h2>“);<br>       out.println(“床前明月光<br>“);<br>       out.println(“疑是地上霜<br>“);<br>       out.flush();<br>       //out.clear();//这里会抛出异常。<br>       out.clearBuffer();//这里不会抛出异常。<br>       out.println(“举头望明月<br>“);<br>       out.println(“低头思故乡<br>“);</p>
+<pre><code>%&gt;
+    缓冲区大小：&lt;%=out.getBufferSize() %&gt;byte&lt;br&gt;
+    缓冲区剩余大小：&lt;%=out.getRemaining() %&gt;byte&lt;br&gt;
+   是否自动清空缓冲区：&lt;%=out.isAutoFlush() %&gt;&lt;BR&gt;    
+</code></pre>
+  </body>
+
+<p>2、request对象<br>客户端的请求被封装在request对象中，通过它可以了解客户端的请求，然后作出响应，request请求具有request请求域。 常用方法：<br>    getParameter(String name)<br>    getParamterValues(String name)<br>    setAttribute(String name,Object o)<br>    getAttribute(string name)<br>    getContentType();<br>    getProtocol()<br>    getServerName();<br>举个例子：用户注册提交数据给request.jsp，在request.jsp页面根据request对象可以获取提交过来的数据。<br>reg.jsp 注册jsp</p>
+ <body>
+    <h1>用户注册</h1>
+    <hr>
+    <% 
+       int number=-1;
+       //说明用户第一次访问页面，计数器对象还未创建
+       if(application.getAttribute("counter")==null)
+       {
+           application.setAttribute("counter", 0);
+       }
+       number = Integer.parseInt(application.getAttribute("counter")
+       .toString());
+       number++;
+       application.setAttribute("counter", number);
+    %>
+
+<pre><code>&lt;!-- &lt;form name=&quot;regForm&quot; action=&quot;request.jsp&quot; method=&quot;post&quot;&gt; --&gt;
+&lt;form name=&quot;regForm&quot; action=&quot;response.jsp&quot; method=&quot;post&quot;&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;用户名：&lt;/td&gt;
+    &lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;username&quot;/&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;爱好：&lt;/td&gt;
+    &lt;td&gt;
+       &lt;input type=&quot;checkbox&quot; name=&quot;favorite&quot; value=&quot;read&quot;&gt;读书
+       &lt;input type=&quot;checkbox&quot; name=&quot;favorite&quot; value=&quot;music&quot;&gt;音乐
+       &lt;input type=&quot;checkbox&quot; name=&quot;favorite&quot; value=&quot;movie&quot;&gt;电影
+       &lt;input type=&quot;checkbox&quot; name=&quot;favorite&quot; value=&quot;internet&quot;&gt;上网
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+     &lt;td colspan=&quot;2&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;提交&quot;/&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/form&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;a href=&quot;request.jsp?username=李四&quot;&gt;测试URL传参数&lt;/a&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+         您是第&lt;%=number %&gt;位访问本页面的用户。
+&lt;/center&gt;
+</code></pre>
+  </body>
+ 
+request.jsp
+   <body>
+    <h1>request内置对象</h1>
+    <% 
+       request.setCharacterEncoding("utf-8"); //解决中文乱码问题，无法解决URL传递中文出现的乱码问题。
+       request.setAttribute("password", "123456");
+    
+    %>
+        用户名：<%=request.getParameter("username") %><br>   
+        爱好 ：<% 
+           if(request.getParameterValues("favorite")!=null)
+           {
+          String[] favorites = request.getParameterValues("favorite");
+               for(int i=0;i<favorites.length;i++)
+               {
+                  out.println(favorites[i]+"  ");
+               }
+            }
+        %> <br>
+         密码：<%=request.getAttribute("password") %><br> 
+         请求体的MIME类型:<%=request.getContentType() %><br>
+         协议类型及版本号:  <%=request.getProtocol() %><br>
+         服务器主机名 :<%=request.getServerName() %><br>
+         服务器端口号：<%=request.getServerPort() %><BR>
+         请求文件的长度 ：<%=request.getContentLength() %><BR>
+         请求客户端的IP地址：<%=request.getRemoteAddr() %><BR>
+         请求的真实路径：<%=request.getRealPath("request.jsp") %><br>
+         请求的上下文路径：<%=request.getContextPath() %><BR>         
+                         
+  </body>
+
+<p>3、response对象<br>response对象包含了响应客户端请求的有关信息，它具有页面作用域，该页面的作用域只对该页面有效。常用方法：<br>    getCharacterEncoding()<br>    setContentType();<br>    getWriter();该方法打应输出流总是前于 out.println();<br>    sendRedirect(String location)<br>请求重定向和请求转发：<br>    请求重定向：客户端行为:response.sendDirect();<br>    两次请求，前一次请求的请求对象不会保存，地址栏的url地址会发生改变</p>
+<pre><code>请求转发：服务器行为，request.getResuestDispatcher().forward();
+一次请求，转发后请求对象会保存，地址栏url地址不会变。
+</code></pre>
+<p>4、session对象<br>一些基本概念：<br>    session表示客户端与服务器的一次会话<br>    web中session指的是用户在浏览某个网站，是进入网站到关闭浏览器这段时间<br>    它是保存在服务器的内存中，不同用户有不同的session<br>    它在第一个jsp页面被装载时自动创建，完成会话期管理。<br>它的的一些常用方法：<br>    getCreationTime();<br>    String getId();<br>    setAttribute(String name,Object o);<br>    getAttribute(String name);<br>    String[] getValueNames();<br>    int getMaxInactivieInterval();单位 秒<br>    setMaxInactiveInterval();<br>举个例子：</p>
+<body>
+    <h1>session内置对象</h1>
+    <hr>
+    <% 
+      SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日    
+       HH:mm:ss");
+      Date d = new Date(session.getCreationTime());
+      session.setAttribute("username", "admin"); 
+      session.setAttribute("password", "123456");
+      session.setAttribute("age", 20);
+      
+      //设置当前session最大生成期限单位是秒
+      //session.setMaxInactiveInterval(10);//10秒钟
+      
+    %>
+    Session创建时间：<%=sdf.format(d)%><br>    
+    Session的ID编号：<%=session.getId()%><BR>
+         从Session中获取用户名：<%=session.getAttribute("username") %><br>
+         
+    <a href="session_page2.jsp" target="_blank">跳转到Session_page2.jsp</a>     
+        
+  </body>
+session的生命周期：
+    创建： 当客户端第一次访问某个页面jsp或者servlet，服务器会创建一个 sessionId,每次客户端向服务器发送请求时，都会将sessionId携带过去，服务器会对sessionId进行校验。
+    
+    活动： 当客户端通过超链接打开新页面属于同一次会话；当浏览页面全部关闭，重新打开属于一次新的会话。
+    
+    销毁：调用sesson.invalidate();
+          session过期，默认是30分钟；
+          服务器重启；
+    
+5、application对象
+    application实现了用户数据共享，可存放全局变量。
+    application 开始于服务器的重启，终止于服务器的关闭
+    application 是ServletContext实例。
+
+<p>常用方法：<br>    setAttribute(String ,Object);<br>    getAttribute(String);<br>    Enumeration getAttributeNames();<br>    getServerInfo();返回Jsp 引擎名和版本号<br>举个例子：</p>
+<body>
+    <h1>application内置对象</h1>
+    <% 
+       application.setAttribute("city", "北京");
+       application.setAttribute("postcode", "10000");
+       application.setAttribute("email", "lisi@126.com");
+       
+    %>
+         所在城市是：<%=application.getAttribute("city") %><br>
+    application中的属性有：<% 
+         Enumeration attributes = application.getAttributeNames();
+         while(attributes.hasMoreElements())
+         {
+            out.println(attributes.nextElement()+"  ");
+         }
+    %><br>
+    JSP(SERVLET)引擎名及版本号:<%=application.getServerInfo() %><br>              
+                   
+  </body>
+
+<p>6、page对象<br>page对象就是指当前jsp页面本身，有点像this指针，它是java.lang.Object类的实例。常用的方法就是Object 类的方法。<br>    getClass()<br>    hashCode();<br>    equals();<br>    copy();<br>    clone()<br>    toString();<br>    notify();<br>    notifyAll();<br>    wait();</p>
+<p>7、pageContext对象<br>    pageContext 提供了对jsp页面所有的对象及名字空间的访问<br>    它可以取application 某一属性，也可以取session;<br>    相当于页面所有功能的集大成者。<br>方法：<br>    getOut();<br>    geSession();<br>    getPage();<br>    getRequest();<br>    getResponse();<br>    setAttribute();<br>    getAttibute();<br>    getAttributeScope();<br>    forward();<br>    include();</p>
+<p>8、config对象<br>它是在一个servlet初始化时，jsp页面用它传递信息，比如servlet初始化参数；以及服务器的有关信息。<br>    ServletContext getServletContext();<br>    getInitParameter(String);<br>    Enumeration getInitParameterNames();</p>
+<p>9、exception对象<br>即异常对象。如果一个jsp想要用此对象，就必须把isErrorPage 设为true.<br>&lt;%@ page language=”java” import=”java.util.*” contentType=”text/html; charset=utf-8” isErrorPage=”true” %&gt;<br>&lt;%<br>九大内置对象，讲解完毕，感谢大家，后一篇文章会讲述除了jsp的九大内置对象其他内容。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/22/jsp%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-jsp详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/22/jsp%E8%AF%A6%E8%A7%A3/">“jsp详解”</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/22/jsp%E8%AF%A6%E8%A7%A3/" class="archive-article-date">
+  	<time datetime="2021-03-22T08:20:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、什么是Jsp<br>jsp是一种基于文本的程序，全名java server page,其特点是html和java程序共存。执行时jsp会被运行容器编译，编译后的jsp跟servlet一样，因此jsp是另一种形式的servlet。</p>
+<p>二、jsp页面组成<br>jsp 页面包括以下内容：<br>    静态内容<br>    指令<br>    表达式<br>    小脚本<br>    声明<br>    注释<br>1.指令：<br>    page指令：  通常位于jsp页面的顶端，同一个页面可以有多个page指令。<br>    include指令：将一个外部文件嵌入到jsp文件中。<br>    taglib指令 ：使用标签定义新的自定义标签。<br>1.1其中page指令语法：<br>&lt;%@ page 属性=“属性值”&gt;<br>属性 | 默认值<br>——— | ——— language | java import | “”<br>1.2 include 指令<br>  &lt;%@ include file=”url” %&gt;</p>
+<p>1.3 动作<br>    • include动作<br>  &lt;jsp:include page=”url” flush=”true”/&gt;<br>include 动作和include指令区别<br>描述      include指令       include 动作<br>语法    &lt; % @includefile=””/&gt;    &lt; jsp:include page=”url” flush=”true”/&gt;<br>发生时间      页面转换期间       请求期间<br>包含内容      文件实际内容       页面的输出<br>转化servlet      一个servlet       2个servlet<br>编译时间      较慢       较快<br>执行时间      稍快       较慢–每次资源必须被编译</p>
+<p>forward动作<br>  &lt;jsp:forward page=”url”/&gt;<br>  ==<br>  request.getRequestDispatcher(“/url”).forward(res,resp);</p>
+<p>param动作<br>   &lt;jsp:param name=”参数名” value=”参数值”/&gt;<br>   常常与<a href="jsp:forward">jsp:forward</a>一起使用</p>
+<p>例子：<br>   &lt;jsp:forward page=”user.jsp”&gt;</p>
+<pre><code>  &lt;jsp:param name=&quot;email&quot;  value=&quot;1233@154.com&quot;/&gt;
+</code></pre>
+<p>   </jsp:forward></p>
+<p>2.jsp注释<br>    html注释<br>  <!-- html注释 -->//客户端可见<br>    jsp 注释<br>  &lt;%– jsp注释 –%&gt;//客户端不可见<br>    jsp 脚本注释 //客户端不可见<br>  //单行注释<br>  ／** 多行注释*／</p>
+<p>3.jsp脚本<br>在jsp页面中执行的java代码，语法：<br>&lt;%   java 代码 %&gt;</p>
+<p>4.jsp声明 在jsp页面定义变量或者方法，语法<br>&lt;%! java 代码  %&gt;<br>举例：<br>&lt;%!<br> String s=”adele”;<br> int add(int x,int y){<br>    return x+y;<br> }<br>%&gt;</p>
+<p>5.jsp表达式 在jsp页面执行的表达式，语法：<br>&lt;% =表达式 %&gt;// 表达式不以分号结尾<br>举例：<br>&lt;%!<br> String s=”adele”;<br>%&gt;</p>
+<h2>  hello,<%=s %> </h2>
+
+<p>三、jsp生命周期</p>
+<p>jspService()是用来处理客户端请求的，对于每一个请求，服务器会创建一个新的线程来处理该请求。以多线程方式执行大大降低对系统的资源需求，提高系统的并发量和缩短了响应时间，servlet是常驻在服务器内存中。<br>它同servlet 一样，jsp 实例初始化和销毁也会调用sevlet的init() 和destroy(); 另外jsp还有自己的初始化方法_jspInit();_jspDestroy();<br>&lt;%@ page language=”java” contentType=”text/html”;charset=”utf-8”&gt;<br>&lt;%!<br>public void _jspInit(){<br>}<br>public void _jspDestroy(){<br>}<br>%&gt;</p>
+<p>四、javaben的使用<br>动作元素： 动作元素为请求处理阶段提供信息。</p>
+<p>在jsp页面使用javaben<br>    像普通的java类一样，创建javabean;<br>    在jsp使用动作标签来使用 javaben<br>相关标签如下：<br>&lt;jsp:useBean id=”” class=”” scope=”” /&gt;<br>&lt;jsp:setProperty name=”javabean 是例”  property=”*”/&gt;(跟表单关联)<br>&lt;jsp:setProperty name=”javabean 是例”  property=”javaben 属性名”/&gt;(跟表单关联)<br>&lt;jsp:setProperty name=”javabean 是例”  property=”javaben 属性名”  value=””/&gt;(手动设置)<br>&lt;jsp:setProperty name=”javabean 是例”  property=”javaben 属性名”  param=”request对象参数”/&gt;(跟request参数关联)<br>&lt;jsp:getProperty name=”” property=””/&gt;<br>举个例子： 首先用户 在login.jsp提交表单，然后用户在dologin.jsp 根据动作标签获取参数。<br>login.jsp<br> <form name="loginForm" action="dologin.jsp?mypass=999999" method="post"><br>      <table><br>        <tr><br>          <td>用户名：</td><br>          <td><input type="text" name="username" value=""/></td><br>        </tr><br>        <tr><br>          <td>密码：</td><br>          <td><input type="password" name="password" value=""/></td><br>        </tr><br>        <tr><br>          <td colspan="2" align="center"><input type="submit" value="登录"/></td></p>
+<pre><code>    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/form&gt;
+</code></pre>
+<p>dologin.jsp</p>
+<body>
+    <jsp:useBean id="myUsers" class="com.po.Users" scope="page"/>
+    <h1>setProperty动作元素</h1>
+    <hr>
+   <!--根据表单自动匹配所有的属性 -->
+   <%--<jsp:setProperty name="myUsers" property="*"/>--%>
+
+   <!--根据表单匹配所有部分的属性 -->
+<p>   &lt;%–&lt;jsp:setProperty name=”myUsers” property=”username”/&gt;–%&gt;</p>
+   <!--根表单无关，通过手工赋值给属性 -->
+<p>   &lt;%–&lt;jsp:setProperty name=”myUsers” property=”username” value=”lisi”/&gt;<br>       &lt;jsp:setProperty name=”myUsers” property=”password” value=”888888”/&gt;–%&gt;</p>
+   <!--通过URL传参数给属性赋值 -->
+<p>   &lt;jsp:setProperty name=”myUsers” property=”username”/&gt;<br>   &lt;jsp:setProperty name=”myUsers” property=”password” param=”mypass”/&gt;</p>
+   <!-- 使用传统的表达式方式来获取用户名和密码 -->
+<p>   &lt;%–<br>       用户名：&lt;%=myUsers.getUsername() %&gt;<br><br>       密码：&lt;%=myUsers.getPassword() %&gt;<br><br>   –%&gt;</p>
+   <!-- 使用getProperty方式来获取用户名和密码 -->
+<pre><code>  用户名：&lt;jsp:getProperty name=&quot;myUsers&quot; property=&quot;username&quot;/&gt; &lt;br&gt;
+  密码：&lt;jsp:getProperty name=&quot;myUsers&quot; property=&quot;password&quot;/&gt;&lt;br&gt;
+</code></pre>
+   <br>
+   <br>
+      <a href="testScope.jsp">测试javabean的四个作用域范围</a>
+      <% request.getRequestDispatcher("testScope.jsp").forward(request,
+      response);%>
+  </body>
+
+<p>javaben 四大作用域<br>    • page ，仅当前页面有效<br>    • request ,通过httpRequest.getAttribute()获取javabean对象<br>    • session ,通过httpSession.getAttribute() 获取javabean对象<br>    • application，通过application.getAttribute方法获取javabean 对象。</p>
+<p>五、cookie<br>1.概述：<br>由于http协议的无状态，无法保存用户的状态，所以需要用session和cookie.<br>cookie 是web服务器保存在客户端的一系列文本信息。它的作用是记录一些用户的行为，简化登陆，但是容易泄露用户信息。</p>
+<p>2.jsp创建和使用cookie<br>    • 创建cookie<br>    Cookie cookie=new Cookie(String ,Object);<br>    • 写入cookie<br>    response.addCookie(cookie);<br>    • 读取 cookie<br>    Cookie[] cookies=request.getCookies();</p>
+<p>3.cookie的常用方法<br>    • setMaxAge();<br>    • setValue();<br>    • getName();<br>    • getValue();<br>    • getMaxAge();<br>举个列子： 使用cookie记住用户登陆的账号密码；<br>登陆界面：</p>
+<body>
+    <h1>用户登录</h1>
+    <hr>
+    <% 
+      request.setCharacterEncoding("utf-8");
+      String username="";
+      String password = "";
+      Cookie[] cookies = request.getCookies();
+      if(cookies!=null&&cookies.length>0)
+      {
+           for(Cookie c:cookies)
+           {
+              if(c.getName().equals("username"))
+              {
+                   username =  URLDecoder.decode(c.getValue(),"utf-8");
+              }
+              if(c.getName().equals("password"))
+              {
+                   password =  URLDecoder.decode(c.getValue(),"utf-8");
+              }
+           }
+      }
+    %>
+
+<pre><code>&lt;form name=&quot;loginForm&quot; action=&quot;dologin.jsp&quot; method=&quot;post&quot;&gt;
+   &lt;table&gt;
+
+     &lt;tr&gt;
+       &lt;td&gt;用户名：&lt;/td&gt;
+       &lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;username&quot; value=&quot;&lt;%=username %&gt;&quot;/&gt;&lt;/td&gt;
+     &lt;/tr&gt;
+
+     &lt;tr&gt;
+       &lt;td&gt;密码：&lt;/td&gt;
+       &lt;td&gt;&lt;input type=&quot;password&quot; name=&quot;password&quot; value=&quot;&lt;%=password %&gt;&quot; /&gt;
+       &lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+       &lt;td colspan=&quot;2&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;isUseCookie&quot;     
+        checked=&quot;checked&quot;/&gt;十天内记住我的登录状态&lt;/td&gt;
+     &lt;/tr&gt;
+
+     &lt;tr&gt;
+       &lt;td colspan=&quot;2&quot; align=&quot;center&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;登录&quot;/&gt;  
+       &lt;input type=&quot;reset&quot; value=&quot;取消&quot;/&gt;&lt;/td&gt;
+     &lt;/tr&gt;
+   &lt;/table&gt;
+&lt;/form&gt;
+</code></pre>
+  </body>
+
+<p>处理登陆逻辑的jsp<br> <body><br>    <h1>登录成功</h1><br>    <hr><br>    <br><br>    <br><br>    <br><br>    &lt;%<br>       request.setCharacterEncoding(“utf-8”);<br>       //首先判断用户是否选择了记住登录状态<br>       String[] isUseCookies = request.getParameterValues(“isUseCookie”);<br>       if(isUseCookies!=null&amp;&amp;isUseCookies.length&gt;0)<br>       {<br>   //把用户名和密码保存在Cookie对象里面<br>   String username = URLEncoder.encode(request.getParameter(“username”),”utf-8”);</p>
+<p>   //使用URLEncoder解决无法在Cookie当中保存中文字符串问题<br>   String password = URLEncoder.encode(request.getParameter(“password”),”utf-8”);</p>
+<pre><code>      Cookie usernameCookie = new Cookie(&quot;username&quot;,username);
+      Cookie passwordCookie = new Cookie(&quot;password&quot;,password);
+      usernameCookie.setMaxAge(864000);
+      passwordCookie.setMaxAge(864000);//设置最大生存期限为10天
+      response.addCookie(usernameCookie);
+      response.addCookie(passwordCookie);
+   &#125;
+   else
+   &#123;
+      Cookie[] cookies = request.getCookies();
+      if(cookies!=null&amp;&amp;cookies.length&gt;0)
+      &#123;
+         for(Cookie c:cookies)
+         &#123;
+            if(c.getName().equals(&quot;username&quot;)||c.getName().equals(&quot;password&quot;))
+            &#123;
+                c.setMaxAge(0); //设置Cookie失效
+                response.addCookie(c); //重新保存。
+            &#125;
+         &#125;
+      &#125;
+   &#125;
+%&gt;
+&lt;a href=&quot;users.jsp&quot; target=&quot;_blank&quot;&gt;查看用户信息&lt;/a&gt;
+</code></pre>
+  </body>
+
+<p>使用cookie获取用户信息：<br> <body><br>    <h1>用户信息</h1><br>    <hr><br>    &lt;%<br>      request.setCharacterEncoding(“utf-8”);<br>      String username=””;<br>      String password = “”;<br>      Cookie[] cookies = request.getCookies();<br>      if(cookies!=null&amp;&amp;cookies.length&gt;0)<br>      {<br>           for(Cookie c:cookies)<br>           {<br>              if(c.getName().equals(“username”))<br>              {<br>                   username = URLDecoder.decode(c.getValue(),”utf-8”);<br>              }<br>              if(c.getName().equals(“password”))<br>              {<br>                   password = URLDecoder.decode(c.getValue(),”utf-8”);<br>              }<br>           }<br>      }<br>    %&gt;<br>    <BR><br>    <BR><br>    <BR><br>         用户名：&lt;%=username %&gt;<br><br>         密码：&lt;%=password %&gt;<br><br>  </body></p>
+<p>3.cookie和 session的区别<br>session    cookie<br>在服务端保存信息    在客户端保存信息<br>保存的 object类型    保存的是 string 类型<br>随会话结束，销毁数据    可以长期保存在客户端中<br>重要信息    不重要信息</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/22/jsp%E8%AF%A6%E8%A7%A3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="“创建、暂停、更改、删除-定时任务job" class="article article-type-“创建、暂停、更改、删除  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/22/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1job/">定时任务job”</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/22/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1job/" class="archive-article-date">
+  	<time datetime="2021-03-22T07:20:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>--查看已知定时任务调用存储过程的运行状态
+    SELECT t.* FROM dba_jobs t where upper(what) like 
+    &#39;%PRC_VW_AUTO_DEDUCT01%&#39;
+
+
+--查询 当前库中运行的 job ；
+
+    SELECT t.* FROM dba_jobs t 
+    
+    
+--创建一个 定时任务 job
+
+    declare
+        job number;
+    BEGIN
+        DBMS_JOB.SUBMIT( 
+            JOB =&gt; job, /*自动生成JOB_ID*/ 
+            WHAT =&gt; &#39;GET_WARNING_INFO(2, 202, &#39;&#39;2,44,11&#39;&#39;);&#39;, /*需要执行的存储过程名称或SQL语句*/ 
+            NEXT_DATE =&gt; sysdate, /*初次执行时间-立即执行*/ 
+            INTERVAL =&gt; &#39;trunc(sysdate,&#39;&#39;mi&#39;&#39;)+1/(24*60)&#39; /*每隔1分钟执行一次*/
+        ); 
+        commit;
+    end;
+    
+
+--根据某个job下次的执行时间
+
+    SELECT job,next_date,what FROM dba_jobs WHERE JOB = 定时任务的唯一标识码JOB; /*定时任务的下一次执行时间*/
+
+
+--手动调用job
+
+    begin
+        DBMS_JOB.RUN(40); /*40 job的id*/
+    end;
+    
+    
+--停止 job
+
+    begin 
+        dbms_job.broken(jobId,true,next_date); 
+        /*停止一个job,jobId, job的ID,里面参数true也可是false，next_date（某一时刻停止）也可是sysdate（立刻停止）。 */
+        commit;
+    end;
+    
+    
+--删除 job
+
+    begin
+        dbms_job.remove(83); 
+        /*删除自动执行的job,参数是 job的id*/
+        commit;
+    end;
+    
+    
+--修改 job 的间隔时间
+
+    begin
+        dbms_job.interval(job，interval); 
+        /*job job的ID,interval: 计算下一次任务执行的时间表达式*/
+        commit;
+    end;
+    
+    
+--修改下一次执行时间
+
+    begin
+        dbms_job.next_date(job，next_date); 
+        /*job: job 的ID；nex_date:要修改后的计算下一次执行的时间表达式*/
+        commit;
+    end;
+    
+    
+--修改定时任务 job 要执行的操作
+    begin
+        dbms_job.what(&#39;newProcedures();&#39;)
+        /*newProcedures(); 要更改的新操作名称*/
+        commit;
+    end;
+</code></pre>
+<p>其他知识点：</p>
+<p>dba_jobs            表中字段含义：<br>JOB                    任务的唯一标识码<br>LOG_USER             提交任务的用户<br>PRIV_USER           赋予任务权限的用户<br>SCHEMA_USER         对用户作语法分析的用户模式<br>LAST_DATE           最后一次成功执行任务的时间<br>LAST_SEC             最后一次成功执行任务的时间的时分秒<br>THIS_DATE           正在执行的任务的开始时间，若没有则为空<br>THIS_SEC             正在执行的任务的开始时间的时分秒，若没有则为空<br>NEXT_DATE             下一次执行定时任务的时间<br>NEXT_SEC             下一次执行定时任务的时间的时分秒<br>TOTAL_TIME             执行当前任务所需要的时间，单位：秒<br>BROKEN                 标志参数，Y表示任务中断，以后不会再运行 <br>INTERTAL             计算下一次执行定时任务的时间表达式<br>FAILURES             当前定时任务执行失败的总次数<br>WHAT                 执行任务的PL/SQL代码块<br>NLS_ENV             任务执行的NLS会话设置<br>MISC_ENV             定时任务运行的其他一些参数设置<br>INSTANCE             标识当前任务运行是否受限，0 没有受限<br> <br> <br> <br>INTERVAL                             部分参数值示例：<br>每天午夜12点:                     ‘TRUNC(SYSDATE + 1)’<br>每天早上8点30分:                 ‘TRUNC(SYSDATE + 1) + （8<em>60+30）/(24</em>60)’<br>每星期二中午12点:                 ‘NEXT_DAY(TRUNC(SYSDATE ), ‘’TUESDAY’’ ) + 12/24’<br>每个月第一天的午夜12点:         ‘TRUNC(LAST_DAY(SYSDATE ) + 1)’<br>每个季度最后一天的晚上11点:         ‘TRUNC(ADD_MONTHS(SYSDATE + 2/24, 3 ), ‘Q’ ) -1/24’<br>每星期六和日早上6点10分:         ‘TRUNC(LEAST(NEXT_DAY(SYSDATE, ‘’SATURDAY”), NEXT_DAY(SYSDATE, “SUNDAY”))) + （6×60+10）/（24×60）’<br>每月25号00：00执行:                 ‘TRUNC(LAST_DAY(SYSDATE ) + 25)’</p>
+<p>－－－－－－－－－－－－－－－－－－－－－－－－－－</p>
+<p>1:每分钟执行<br>Interval =&gt; TRUNC(sysdate,’mi’) + 1/ (24*60)<br>或<br>Interval =&gt; sysdate+1/1440<br> <br>2:每天定时执行<br>例如：每天的凌晨1点执行<br>Interval =&gt; TRUNC(sysdate) + 1 +1/ (24)</p>
+<p>3:每周定时执行<br>例如：每周一凌晨1点执行<br>Interval =&gt; TRUNC(next_day(sysdate,’星期一’))+1/24<br> <br>4:每月定时执行<br>例如：每月1日凌晨1点执行<br>Interval =&gt;TRUNC(LAST_DAY(SYSDATE))+1+1/24<br> <br>5:每季度定时执行<br>例如每季度的第一天凌晨1点执行<br>Interval =&gt; TRUNC(ADD_MONTHS(SYSDATE,3),’Q’) + 1/24<br> <br>6:每半年定时执行<br>例如：每年7月1日和1月1日凌晨1点<br>Interval =&gt; ADD_MONTHS(trunc(sysdate,’yyyy’),6)+1/24<br> <br>7:每年定时执行<br>例如：每年1月1日凌晨1点执行<br>Interval =&gt;ADD_MONTHS(trunc(sysdate,’yyyy’),12)+1/24</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/22/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1job/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/22/hello-world/">Hello World</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/22/hello-world/" class="archive-article-date">
+  	<time datetime="2021-03-22T04:29:21.203Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/22/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+  
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
