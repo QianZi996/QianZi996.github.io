@@ -6,15 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021 | qianzi的个人主页</title>
+  <title>基于oracle数据库存储过程的创建、调用以及调试 | qianzi的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="qianzi的个人主页">
-<meta property="og:url" content="http://example.com/archives/2021/index.html">
+  <meta name="description" content="教学大纲：PLSQL编程：Hello World、程序结构、变量、流程控制、游标。  存储过程：概念、无参存储、有参存储（输入、输出）。  JAVA调用存储存储过程。  PLSQL调试  1. PLSQL编程1.1. 概念和目的什么是PL&#x2F;SQL?  PL&#x2F;SQL（Procedure Language&#x2F;SQL）  PLSQL是Oracle对sql语言的过程化扩展 (类似于Basic)  指在SQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于oracle数据库存储过程的创建、调用以及调试">
+<meta property="og:url" content="http://example.com/2021/03/26/%E5%9F%BA%E4%BA%8Eoracle%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA%E3%80%81%E8%B0%83%E7%94%A8%E4%BB%A5%E5%8F%8A%E8%B0%83%E8%AF%95/index.html">
 <meta property="og:site_name" content="qianzi的个人主页">
+<meta property="og:description" content="教学大纲：PLSQL编程：Hello World、程序结构、变量、流程控制、游标。  存储过程：概念、无参存储、有参存储（输入、输出）。  JAVA调用存储存储过程。  PLSQL调试  1. PLSQL编程1.1. 概念和目的什么是PL&#x2F;SQL?  PL&#x2F;SQL（Procedure Language&#x2F;SQL）  PLSQL是Oracle对sql语言的过程化扩展 (类似于Basic)  指在SQL">
 <meta property="og:locale">
+<meta property="og:image" content="http://example.com/img/oracle_01.png">
+<meta property="og:image" content="http://example.com/img/oracle_02.png">
+<meta property="og:image" content="http://example.com/img/oracle_03.png">
+<meta property="og:image" content="http://example.com/img/oracle_04.png">
+<meta property="og:image" content="http://example.com/img/oracle_05.png">
+<meta property="og:image" content="http://example.com/img/oracle_06.png">
+<meta property="og:image" content="http://example.com/img/oracle_07.png">
+<meta property="og:image" content="http://example.com/img/oracle_08.png">
+<meta property="og:image" content="http://example.com/img/oracle_09.png">
+<meta property="og:image" content="http://example.com/img/oracle_10.png">
+<meta property="og:image" content="http://example.com/img/oracle_11.png">
+<meta property="og:image" content="http://example.com/img/oracle_12.png">
+<meta property="og:image" content="http://example.com/img/oracle_13.png">
+<meta property="article:published_time" content="2021-03-26T06:34:08.892Z">
+<meta property="article:modified_time" content="2021-03-26T07:28:24.874Z">
 <meta property="article:author" content="吴正乾">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/oracle_01.png">
   
     <link rel="alternative" href="/atom.xml" title="qianzi的个人主页" type="application/atom+xml">
   
@@ -150,157 +168,541 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-基于oracle数据库存储过程的创建、调用以及调试" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      基于oracle数据库存储过程的创建、调用以及调试
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/26/%E5%9F%BA%E4%BA%8Eoracle%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA%E3%80%81%E8%B0%83%E7%94%A8%E4%BB%A5%E5%8F%8A%E8%B0%83%E8%AF%95/" class="archive-article-date">
+
+        
+        <a href="/2021/03/26/%E5%9F%BA%E4%BA%8Eoracle%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA%E3%80%81%E8%B0%83%E7%94%A8%E4%BB%A5%E5%8F%8A%E8%B0%83%E8%AF%95/" class="archive-article-date">
   	<time datetime="2021-03-26T06:34:08.892Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-26</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/26/%E5%9F%BA%E4%BA%8Eoracle%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA%E3%80%81%E8%B0%83%E7%94%A8%E4%BB%A5%E5%8F%8A%E8%B0%83%E8%AF%95/">基于oracle数据库存储过程的创建、调用以及调试</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="教学大纲："><a href="#教学大纲：" class="headerlink" title="教学大纲："></a>教学大纲：</h3><pre><code>PLSQL编程：Hello World、程序结构、变量、流程控制、游标。
 
-        <div class="article-info info-on-right">
-          
-          
+存储过程：概念、无参存储、有参存储（输入、输出）。
 
+JAVA调用存储存储过程。
+
+PLSQL调试
+</code></pre>
+<h3 id="1-PLSQL编程"><a href="#1-PLSQL编程" class="headerlink" title="1. PLSQL编程"></a>1. PLSQL编程</h3><h3 id="1-1-概念和目的"><a href="#1-1-概念和目的" class="headerlink" title="1.1. 概念和目的"></a>1.1. 概念和目的</h3><pre><code>什么是PL/SQL?
+
+PL/SQL（Procedure Language/SQL）
+
+PLSQL是Oracle对sql语言的过程化扩展 (类似于Basic)
+
+指在SQL命令语言中增加了过程处理语句（如分支、循环等），使SQL语言具有过程处理能力。
+
+（减少数据库和服务器之间的交互，提高执行效率）
+</code></pre>
+<h3 id="1-2-程序结构"><a href="#1-2-程序结构" class="headerlink" title="1.2. 程序结构"></a>1.2. 程序结构</h3><pre><code>通过Plsql Developer工具的Test Window 创建 程序模版或者通过语句在SQL Window编写
+
+提示：PLSQL语言的大小写是不区分的
+
+PL/SQL可以分为三个部分：声明部分、可执行部分、异常处理部分。
+
+DECLARE
+     -- 声明变量、游标。 
+     I INTEGER;
+BEGIN
+     -- 执行语句
+     --[异常处理]
+END;
+
+
+其中 DECLARE部分用来声明变量或游标（结果集类型变量），如果程序中无变量声明可以省略掉
+</code></pre>
+<h3 id="1-3-Hello-World"><a href="#1-3-Hello-World" class="headerlink" title="1.3. Hello World"></a>1.3. Hello World</h3><pre><code>BEGIN
+     --打印hello world
+    DBMS_OUTPUT.PUT_LINE(&#39;hello world&#39;);
+END;
+
+其中DBMS_OUTPUT 为oracle内置程序包，相当于Java中的System.out,而PUT_LINE（）是调用的方法,
+
+相当于println（）方法
+
+在sqlplus中也可以编写运行PLSQL程序：
+
+默认情况下，输出选项是关闭状态的 我们需要开启一下 set serveroutput on
+
+SQLPLUS中执行PLSQL程序 需要在程序最后添加一个 / 标识程序的结束
+</code></pre>
+<p><img src="/img/oracle_01.png" alt="oracle_01"></p>
+<h3 id="1-4-变量"><a href="#1-4-变量" class="headerlink" title="1.4. 变量"></a>1.4. 变量</h3><pre><code>PLSQL编程中常见的变量分两大类：
+
+普通数据类型（char,varchar2, date, number, boolean, long）
+
+特殊变量类型（引用型变量、记录型变量）
+
+
+声明变量的方式为
+
+变量名 变量类型（变量长度） 例如： v_name varchar2(20);
+</code></pre>
+<h3 id="1-4-1-普通变量"><a href="#1-4-1-普通变量" class="headerlink" title="1.4.1.普通变量"></a>1.4.1.普通变量</h3><pre><code>变量赋值的方式有两种：
+
+直接赋值语句  :=  比如：v_name := &#39;zhangsan&#39;
+
+语句赋值，使用select...into...赋值：（语法 select 值 into 变量）
+ select &#39;lisi&#39; 
+  into v_name
+  from dual;
+</code></pre>
+<h3 id="1-4-2-引用型变量"><a href="#1-4-2-引用型变量" class="headerlink" title="1.4.2.引用型变量"></a>1.4.2.引用型变量</h3><pre><code>变量的类型和长度取决于表中字段的类型和长度
+
+通过表名.列名%TYPE指定变量的类型和长度，
+
+例如：声明员工姓名、员工薪水两个字段，可以用以下的语法
+  v_name emp.ename%TYPE;    v_salary emp.esalary%TYPE;
+
+  SELECT ENAME,ESALARY
+  into v_name,v_salary
+  FROM EMP
+  WHERE ROWNUM=1
+  ;
+
+引用型变量的好处：
+
+使用普通变量定义方式，需要知道表中列的类型，而使用引用类型，不需要考虑列的类型，
+
+使用%TYPE是非常好的编程风格，因为他使得PL/SQL更加灵活，更加适应于对数据库定义的更新。
+</code></pre>
+<h3 id="1-4-3-记录型变量"><a href="#1-4-3-记录型变量" class="headerlink" title="1.4.3.记录型变量"></a>1.4.3.记录型变量</h3><pre><code>接受表中的一整行记录，相当于Java中的一个对象
+
+语法：变量名称    表名%ROWTYPE，
+
+例如：v_emp emp%ROWTYPE;
+
+  SELECT *
+  into v_emp
+  FROM EMP
+  WHERE ROWNUM=1 ;
+
+    DBMS_OUTPUT.put_line(v_emp.ename||&#39;,&#39;||v_emp.esalary);
+
+如果有一个表，有100个字段，那么你程序如果要使用这100个字段话，如果你使用引用型变量一个个声明，
+
+会特别麻烦，记录型变量可以方便的解决这个问题。
+</code></pre>
+<h3 id="错误的使用："><a href="#错误的使用：" class="headerlink" title="错误的使用："></a>错误的使用：</h3><pre><code>记录型变量只能存储一个完整的行数据
+</code></pre>
+<p><img src="/img/oracle_02.png" alt="oracle_02"></p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><pre><code>返回的行太多了，记录型变量也接受不了
+</code></pre>
+<p><img src="/img/oracle_03.png" alt="oracle_03"></p>
+<h3 id="1-5-流程控制"><a href="#1-5-流程控制" class="headerlink" title="1.5.流程控制"></a>1.5.流程控制</h3><h3 id="1-5-1-条件分支"><a href="#1-5-1-条件分支" class="headerlink" title="1.5.1.条件分支"></a>1.5.1.条件分支</h3><pre><code>语法：
+
+ begin
+
+ IF    条件1   THEN   执行1
+ 
+ ELSIF    条件2    THEN   执行2
+
+ ELSE    执行3
+
+ END IF；
+
+end;
+
+注意关键字：ELSIF
+</code></pre>
+<h3 id="1-5-2-循环"><a href="#1-5-2-循环" class="headerlink" title="1.5.2.循环"></a>1.5.2.循环</h3><pre><code>在ORACLE中有三种循环方式，这里我们不再展开，只介绍其中一种：loop循环
+
+语法：
+
+BEGIN
+
+  LOOP
+
+  EXIT WHEN 退出循环条件
+
+  END LOOP;
+
+END;
+</code></pre>
+<h3 id="【示例】打印数字1-10"><a href="#【示例】打印数字1-10" class="headerlink" title="【示例】打印数字1-10"></a>【示例】打印数字1-10</h3><pre><code>DECLARE
+    -- 声明循环变量
+    V_NUM NUMBER := 1;
+
+BEGIN
+    LOOP
+        EXIT WHEN V_NUM &gt; 10;
+        DBMS_OUTPUT.PUT_LINE(V_NUM);
+        -- 循环变量的自增
+        V_NUM := V_NUM + 1;
+    END LOOP;
+END;
+</code></pre>
+<h3 id="2-游标"><a href="#2-游标" class="headerlink" title="2.游标"></a>2.游标</h3><h3 id="2-1-什么是游标"><a href="#2-1-什么是游标" class="headerlink" title="2.1.什么是游标"></a>2.1.什么是游标</h3><pre><code>用于临时存储一个查询返回的多行数据（结果集，类似于Java的Jdbc连接返回的ResultSet集合），
+
+通过遍历游标，可以逐行访问处理该结果集的数据。
+
+游标的使用方式：声明---&gt;打开---&gt;读取---&gt;关闭
+</code></pre>
+<h3 id="2-2-语法"><a href="#2-2-语法" class="headerlink" title="2.2.语法"></a>2.2.语法</h3><pre><code>游标声明： CURSOR 游标名[(参数列表)] IS 查询语句;
+
+游标的打开： OPEN 游标名；
+
+游标的取值； FETCH 游标名 INTO 变量列表；（游标的数据放变量列表里）
+
+游标的关闭；CLOSE 游标名；
+</code></pre>
+<h3 id="2-3-游标的属性"><a href="#2-3-游标的属性" class="headerlink" title="2.3.游标的属性"></a>2.3.游标的属性</h3><pre><code>游标的属性————返回值类型——————说明
+
+%ROWCOUNT-----------整型----------获得FETCH语句返回的数据整行
+
+%FOUND------------布尔型---------------最近的FETCH语句返回一行数据则为真，否则为假（能拿到数
+
+据并且能返回一条数据，则真）
+
+%NOTFOUND--------------布尔型-----------与%FOUND属性返回值相反（一般用于退出循环的判断）
+
+%ISOPEN----------------布尔值-------------游标已经打开时值为真，否则为假
+
+其中%NOTFOUND是在游标中找不到元素的时候返回TRUE，通常用来判断退出循环。
+</code></pre>
+<h3 id="2-4-创建和使用"><a href="#2-4-创建和使用" class="headerlink" title="2.4.创建和使用"></a>2.4.创建和使用</h3><pre><code>【示例】使用游标查询emp表中所有员工的姓名和工资，并将其依次打印出来。
+
+DECLARE
+    -- 声明游标
+    CURSOR C_EMP IS
+        SELECT ENAME, ESALARY FROM EMP;
+
+    -- 声明变量接受游标中的数据
+    V_ENAME  EMP.ENAME%TYPE;
+    V_SALARY EMP.ESALARY%TYPE;
+
+BEGIN
+    -- 打开游标
+    OPEN C_EMP;
+    -- 遍历游标
+    LOOP
+        -- 获取游标中的数据
+        FETCH C_EMP
+            INTO V_ENAME, V_SALARY;
+        -- 退出循环条件
+        EXIT WHEN C_EMP%NOTFOUND;
+        
+        DBMS_OUTPUT.PUT_LINE(&#39;姓名：&#39; || V_ENAME || &#39;薪资：&#39; || V_SALARY);
+    
+    END LOOP;
+
+    -- 关闭游标
+    CLOSE C_EMP;
+
+END;
+</code></pre>
+<h3 id="2-5-带参数的游标"><a href="#2-5-带参数的游标" class="headerlink" title="2.5.带参数的游标"></a>2.5.带参数的游标</h3><pre><code>DECLARE
+    -- 声明游标
+    CURSOR C_EMP(V_EDEPNO emp.edepno%type) IS
+        SELECT ENAME, ESALARY FROM EMP WHERE EDEPNO=V_EDEPNO;
+
+    -- 声明变量接受游标中的数据
+    V_ENAME  EMP.ENAME%TYPE;
+    V_SALARY EMP.ESALARY%TYPE;
+
+BEGIN
+    -- 打开游标
+    OPEN C_EMP(&#39;a&#39;);
+    -- 遍历游标
+    LOOP
+        -- 获取游标中的数据
+        FETCH C_EMP
+            INTO V_ENAME, V_SALARY;
+        -- 退出循环条件
+        EXIT WHEN C_EMP%NOTFOUND;
+        
+        DBMS_OUTPUT.PUT_LINE(&#39;姓名：&#39; || V_ENAME || &#39;薪资：&#39; || V_SALARY);
+    
+    END LOOP;
+
+    -- 关闭游标
+    CLOSE C_EMP;
+
+END;
+</code></pre>
+<h3 id="3-存储过程"><a href="#3-存储过程" class="headerlink" title="3.存储过程"></a>3.存储过程</h3><h3 id="3-1-概念作用"><a href="#3-1-概念作用" class="headerlink" title="3.1.概念作用"></a>3.1.概念作用</h3><pre><code>之前我们编写的PLSQL程序可以进行表的操作、判断、循环逻辑处理的工作，但无法重复调用。可以理解之
+
+前的代码全部编写在了main方法中，是匿名程序，JAVA可以通过封装对象和方法来解决复用问题。PLSQL是
+
+将一个个PLSQL的业务处理过程存储起来进行复用，这些被存储起来的PLSQL程序称之为存储过程
+
+存储过程作用：
+
+在开发程序中，为了一个特定的业务功能，会向数据库进行多次连接关闭（连接和关闭时很耗费资源），
+
+需要对数据库进行多次I/O读写，性能比较低。如果把这些业务放到PLSQL中，在应用程序中只需要调用
+
+PLSQL就可以做到连接关闭一次数据库就可以实现我们的业务，可以大大提高效率。
+
+ORACLE官方给的建议：能够让数据库操作的不要放在程序中。在数据库中实现基本上不会出现错误，在程
+
+序中操作可能会存在错误。（如果在数据库中操作数据，可以有一定的日志恢复等功能。）
+</code></pre>
+<h3 id="3-2-语法"><a href="#3-2-语法" class="headerlink" title="3.2.语法"></a>3.2.语法</h3><pre><code>create or replace procedure     过程名[(参数列表)]  is
+    -- 没有使用declare声明变量，但是可以在begin上边直接声明变量
+begin
+   -- 执行部分
+
+end [过程名] ;
+
+is可换as
+
+根据参数的类型，我们将其分为3类讲解：
+
+|不带参数
+|带输入参数的
+|但输入输出参数（返回值）的。
+</code></pre>
+<h3 id="3-3-1-创建存储"><a href="#3-3-1-创建存储" class="headerlink" title="3.3.1.创建存储"></a>3.3.1.创建存储</h3><pre><code>通过Plsql Developer或者语句创建存储过程：
+
+create or replace procedure P_PRINT_HELLO is
+  --声明变量
+begin
+  DBMS_OUTPUT.PUT_LINE(&#39;HELLO &#39;);
+end P_PRINT_HELLO;
+修改：
+</code></pre>
+<p><img src="/img/oracle_04.png" alt="oracle_04"></p>
+<p><img src="/img/oracle_05.png" alt="oracle_05"></p>
+<h3 id="3-3-2调用存储过程"><a href="#3-3-2调用存储过程" class="headerlink" title="3.3.2调用存储过程"></a>3.3.2调用存储过程</h3><pre><code>通过PLSQL程序调用（在新建文件夹处，重新打开一个test window）
+
+  BEGIN
+     P_PRINT_HELLO;
+     P_PRINT_HELLO;
+     P_PRINT_HELLO;
+  END;
+
+在SQLPLUS中通过EXEC命令调用:
+提示：SQLPLUS中显示结果的前提是需要set serveroutput on
+
+注意：
+
+第一个问题：is和as是可以互用的，用哪个都没关系。
+第二个问题：过程中没有declare关键字，declare用在语句块中。
+</code></pre>
+<h3 id="3-4-带输入参数的存储过程"><a href="#3-4-带输入参数的存储过程" class="headerlink" title="3.4.带输入参数的存储过程"></a>3.4.带输入参数的存储过程</h3><pre><code>功能输入员工名字，打印HELLO员工名
+
+
+create or replace procedure P_PRINT_HELLO (V_ENAME IN EMP.ENAME%TYPE)is
+  --声明变量
+begin
+
+   DBMS_OUTPUT.PUT_LINE(&#39;HELLO &#39;||V_ENAME); 
+
+end P_PRINT_HELLO;
+</code></pre>
+<h3 id="3-5-带输出参数的存储过程"><a href="#3-5-带输出参数的存储过程" class="headerlink" title="3.5 带输出参数的存储过程"></a>3.5 带输出参数的存储过程</h3><pre><code>输入员工名字，将“HELLO员工名”当作返回值输出
+
+create or replace procedure P_PRINT_HELLO (V_ENAME IN EMP.ENAME%TYPE,V_RETURN out VARCHAR2) is
+  --声明变量
+begin
+
+   V_RETURN:=&#39;HELLO &#39;||V_ENAME; 
+
+end P_PRINT_HELLO;
+</code></pre>
+<h3 id="3-7-JAVA程序调用存储过程"><a href="#3-7-JAVA程序调用存储过程" class="headerlink" title="3.7. JAVA程序调用存储过程"></a>3.7. JAVA程序调用存储过程</h3><pre><code>需求:如果一条语句无法实现结果集, 比如需要多表查询,或者需要复杂逻辑查询,我们可以选择调用存储查询
+
+出你的结果.
+</code></pre>
+<p><img src="/img/oracle_06.png" alt="oracle_06"></p>
+<h3 id="3-7-1-分析jdk-API"><a href="#3-7-1-分析jdk-API" class="headerlink" title="3.7.1. 分析jdk API"></a>3.7.1. 分析jdk API</h3><pre><code>通过Connection对象的prepareCall方法可以调用存储过程
+</code></pre>
+<p>​    <img src="/img/oracle_07.png" alt="oracle_07"></p>
+<h3 id="准备环境："><a href="#准备环境：" class="headerlink" title="准备环境："></a>准备环境：</h3><pre><code>l 导入Oracle的jar包
+
+【示例】通过员工号查询员工的姓名和薪资
+
+package cn.itcast.oracle.jdbc;
+import oracle.jdbc.OracleTypes;
+import java.sql.CallableStatement;import java.sql.Connection;import java.sql.DriverManager;
+public class ProcedureTest &#123; 
+public static void main(String[] args) throws Exception &#123;
+     //1.加载驱动
+    Class.forName(&quot;oracle.jdbc.driver.OracleDriver&quot;); 
+    //2.获得连接对象
+    //2.1 设置连接字符串 
+    String url =&quot;jdbc:oracle:thin:@localhost:1521:xe&quot; ;
+    String name = &quot;scott&quot;; String password = &quot;tiger&quot;; 
+    Connection conn = DriverManager.getConnection(url, name, password); 
+    //3.获取语句对象 String sql = &quot;&#123;call p_querysal_out(?,?)&#125;&quot;;
+    //转义语法,&#123;call 存储过程(参数列表)&#125; 
+    CallableStatement call = conn.prepareCall(sql); 
+    //4.设置输入参数
+    call.setInt(1,7839); 
+    //5.注册输出参数
+    call.registerOutParameter(2, OracleTypes.DOUBLE); 
+    //6.执行存储过程
+    call.execute(); 
+    //7.获取输出参数
+    double sal = call.getDouble(2); System.out.println(&quot;薪水:&quot;+sal); 
+    //8.释放资源
+    call.close(); conn.close(); 
+</code></pre>
+<h3 id="存储过程、存储函数、包的区别"><a href="#存储过程、存储函数、包的区别" class="headerlink" title="存储过程、存储函数、包的区别"></a>存储过程、存储函数、包的区别</h3><p><img src="/img/oracle_08.png" alt="oracle_08"></p>
+<p><img src="/img/oracle_09.png" alt="oracle_09"></p>
+<p><img src="/img/oracle_10.png" alt="oracle_10"></p>
+<h3 id="异常-出现异常"><a href="#异常-出现异常" class="headerlink" title="异常 出现异常"></a>异常 出现异常</h3><p><img src="/img/oracle_11.png" alt="oracle_11"></p>
+<p><img src="/img/oracle_12.png" alt="oracle_12"></p>
+<p><img src="/img/oracle_13.png" alt="oracle_13"></p>
+<h3 id="编写一个存储过程，查询员工编号对应的员工名字。如果员工编码查询不出员工名，"><a href="#编写一个存储过程，查询员工编号对应的员工名字。如果员工编码查询不出员工名，" class="headerlink" title="编写一个存储过程，查询员工编号对应的员工名字。如果员工编码查询不出员工名，"></a>编写一个存储过程，查询员工编号对应的员工名字。如果员工编码查询不出员工名，</h3><h3 id="将引发no-data-found异常，显式一则消息。"><a href="#将引发no-data-found异常，显式一则消息。" class="headerlink" title="将引发no_data_found异常，显式一则消息。"></a>将引发no_data_found异常，显式一则消息。</h3><pre><code>declare
+empname varchar2(20);
+begin
+  select ename into empname from emp where sal&gt;8000;
+  dbms_output.put_line(empname);
+  exception
+    when no_data_found then dbms_output.put_line(&#39;未找到任何数据&#39;);
+    when too_many_rows then dbms_output.put_line(&#39;查询结果返回多行&#39;);
+end;
+</code></pre>
+<h3 id="数据库操作注意事项："><a href="#数据库操作注意事项：" class="headerlink" title="数据库操作注意事项："></a>数据库操作注意事项：</h3><pre><code>1.命名规范：表名命名规范、存储过程命名规范
+2.修改数据
+    先查询数据，在修改数据。使用navicat修改生产数据数据请将commit开始。
+    如果不小心删除了数据，可以闪回
+3.操作数据库存储过程、存储函数等，需要备份
+4.不使用外键，高并发时容易引起死锁等问题
+</code></pre>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/26/%E5%9F%BA%E4%BA%8Eoracle%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA%E3%80%81%E8%B0%83%E7%94%A8%E4%BB%A5%E5%8F%8A%E8%B0%83%E8%AF%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/22/jsp%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
-  	<time datetime="2021-03-22T08:21:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/03/22/jsp%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jsp九大内置对象</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/22/jsp%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">jsp九大内置对象</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/22/jsp%E8%AF%A6%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2021-03-22T08:20:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/22/jsp%E8%AF%A6%E8%A7%A3/">“jsp详解”</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-“创建、暂停、更改、删除">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/22/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1job/" class="archive-article-date">
-  	<time datetime="2021-03-22T07:20:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/22/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1job/">定时任务job”</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/22/hello-world/" class="archive-article-date">
-  	<time datetime="2021-03-22T04:29:21.203Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/22/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -323,8 +725,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
